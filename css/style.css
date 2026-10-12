@@ -1,0 +1,608 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap');
+
+/* ROOT */
+*{
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  box-sizing: border-box;
+  /* border: solid 2px black; */
+}
+
+:root{
+  --white-color-: #F8F8F8;
+  --white-color-hover: #f2efef;
+  --black-color-: #222;
+  --black-color-hover: #22222299;
+  --border-radius-: 12px;
+  --title-font-: "Fira Sans Condensed", sans-serif;
+}
+
+
+/* HTML */
+html{
+  scroll-behavior: smooth;
+}
+
+
+/* BODY */
+body{
+  background-color: var(--white-color-);
+}
+
+.navigation, .home, .aboutme, .whaticando, .questions, .contact{
+  min-height: 100vh;
+  padding: 20px 100px 0;
+}
+
+
+/* NAVIGATION */
+.navigation{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 63px;
+}
+
+.nav_left{
+  font-size: 30px;
+  font-weight: 700;
+  font-family: "Bricolage Grotesque", sans-serif;
+  text-decoration: none;
+  color: var(--black-color-);
+}
+
+.nav_right{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.nav_pages{
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  border-bottom: solid 2px transparent;
+  transition: 0.3s ease;
+}
+.nav_pages:hover{
+  border-bottom: solid 2px black;
+  transition: 0.3s ease;
+}
+
+.nav_button{
+  text-decoration: none;
+  color: var(--white-color-);
+  font-weight: 500;
+  background-color: var(--black-color-);
+  padding: 10px 20px;
+  border-radius: var(--border-radius-);
+  transition: 0.3s ease;
+}
+
+.nav_button:hover{
+  background-color: var(--black-color-hover);
+}
+
+
+/* HOME */
+.home{
+  min-height: calc(100vh - 63px);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.homeright img{
+  display: block;
+  width: 500px;
+  border-radius: var(--border-radius-);
+}
+
+.home h1{
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-size: 200px;
+}
+
+.home h4{
+  font-family: var(--title-font-);
+  font-size: 70px;
+  transform: translateY(-50px);
+}
+
+.home p{
+  font-size: 45px;
+  font-weight: 300;
+}
+
+.home #home_btn{
+  margin-top: 20px;
+  display: flex;
+  gap: 50px;
+}
+
+.home .aboutme_btn{
+  text-decoration: none;
+  font-size: 40px;
+  color: var(--white-color-);
+  border: solid 1px black;
+  background-color: var(--black-color-);
+  padding: 10px 20px;
+  border-radius: var(--border-radius-);
+  transform: translateY(0);
+  box-shadow: 10px 20px 20px rgba(0, 0, 0, 0.203);
+  transition: 0.3s ease;
+}
+
+.home #home_btn .aboutme_btn:hover{
+  background-color: var(--black-color-hover);
+  transform: translateY(-10px);
+  transition: 0.3s ease;
+}
+
+.home #home_btn .contact_btn{
+  text-decoration: none;
+  font-size: 40px;
+  color: var(--black-color-);
+  border: solid 2px black;
+  background-color: var(--white-color-);
+  padding: 10px 20px;
+  border-radius: var(--border-radius-);
+  transform: translateY(0);
+  transition: 0.3s ease;
+}
+
+.home #home_btn .contact_btn:hover{
+  background-color: var(--white-color-hover);
+  transform: translateY(-10px);
+  transition: 0.3s ease;
+}
+
+
+/* ABOUTME */
+.aboutme{
+  padding: 0;
+  padding-top: 30px;
+  background-color: var(--black-color-);
+  display: flex;
+  flex-direction: column;
+}
+
+.aboutme h1{
+  font-size: 100px;
+  text-align: center;
+  color: var(--white-color-);
+  letter-spacing: 50px;
+  font-family: "Share Tech Mono", monospace;
+}
+
+.aboutme .comments{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex: 1;
+  padding: 0 50px;
+}
+
+.aboutme img{
+  width: 400px;
+}
+
+.aboutme .comments .comment{
+  color: var(--white-color-);
+  font-size: 28px;
+  width: 500px;
+  display: flex;
+  font-family: "Share Tech Mono", monospace;
+}
+
+.aboutme .comments .comment:last-child{
+  color: var(--white-color-);
+  font-size: 28px;
+  width: 500px;
+  display: flex;
+  font-family: "Share Tech Mono", monospace;
+  text-align: right;
+}
+
+
+/* WHAT I CAN DO */
+.whaticando{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.whaticando h1{
+  padding-top: 30px;
+  letter-spacing: 10px;
+  font-size: 100px;
+  font-family: "Bricolage Grotesque", sans-serif;
+}
+
+.whaticando .infors{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  align-items: stretch;
+  margin-top: 40px;
+}
+
+.whaticando .infors .infor{
+  border-top: solid 5px rgba(8, 8, 8, 0.369);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.258);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  border-radius: var(--border-radius-);
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.whaticando .infors .infor:hover{
+  box-shadow: 0 20px 100px rgba(0, 0, 0, 0.258);
+  transition: 0.3s ease;
+}
+
+.whaticando .infors .infor h3{
+  font-size: 36px;
+}
+
+.whaticando .infors .infor p{
+  font-size: 22px;
+  flex: 1;
+}
+
+.tags{
+  display: flex;
+  width: fit-content;
+  margin: auto;
+  gap: 10px;
+}
+
+.whaticando .infors .infor .tags .tag{
+  font-size: 16px;
+  border: solid 1px black;
+  font-weight: 600;
+  padding: 6px 16px;
+  border-radius: 999px;
+  background-color: var(--white-color-hover);
+}
+
+.whaticando a{
+  display: block;
+  text-decoration: none;
+  color: var(--white-color-);
+  font-weight: 500;
+  margin-top: 50px;
+  font-size: 30px;
+  margin: auto;
+  padding: 10px 16px;
+  background-color: var(--black-color-);
+  box-shadow: 0 0 0;
+  border-radius: var(--border-radius-);
+  transform: translateY(0);
+  transition: 0.3s ease;
+}
+
+.whaticando a:hover{
+  transform: translateY(-10px);
+  box-shadow: 0 5px 20px rgb(47, 46, 46);
+  transition: 0.3s ease;
+}
+
+
+/* CONTACT */
+.contact{
+  background-color: #171717;
+  color: var(--white-color-);
+  display: flex;
+  flex-direction: column;
+}
+
+.contact h1{
+  font-size: 100px;
+  letter-spacing: 10px;
+  text-align: center;
+  font-family: "Bricolage Grotesque", sans-serif;
+}
+
+.contact_container{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex: 1;
+}
+
+.form{
+  display: flex;
+  flex-direction: column;
+  width: 80vh;
+  box-shadow:
+    0 0 30px rgba(255, 255, 255, 0.08),
+    0 0 80px rgba(255, 255, 255, 0.12),
+    0 0 140px rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 40px 30px  ;
+}
+
+.form h3{
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 60px;
+  text-align: center;
+}
+
+.form input{
+  padding: 10px 0;
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 30px;
+  margin: 50px 0;
+  text-align: center;
+  background-color: #171717;
+  border: solid 0;
+  border-bottom: solid 2px white;
+  color: white;
+  cursor: text;
+  box-shadow: 0 0;
+  transition: 0.3s ease;
+}
+
+.form input:focus{
+  outline: none;
+  transition: 0.3s ease;
+}
+
+.form a{
+  text-decoration: none;
+  color: black;
+  font-size: 30px;
+  background-color: white;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 6px 16px;
+  width: fit-content;
+  margin: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 0;
+  transform: translateY(0);
+  transition: 0.3s ease;
+}
+
+.form a:hover{
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.525);
+  transform: translateY(-10px);
+  transition: 0.3s ease;
+}
+
+.contact_right{
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.contact_right h3{
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 60px;
+  text-align: center;
+}
+
+.socialmedia{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;  
+}
+
+.socialmedia img{
+  width: 60px;
+}
+
+.socialmedia a{
+  transform: translateY(0);
+  
+  transition: 0.3s ease;
+}
+
+.socialmedia a:hover{
+  transform: translateY(-8px);
+  transition: 0.3s ease;
+}
+
+/* ===== RESPONSIVE: dán toàn bộ đoạn này vào CUỐI file style.css ===== */
+
+/* Nút hamburger: ẩn trên desktop */
+.nav_toggle{
+  display: none;
+  background: none;
+  border: 0;
+  font-size: 30px;
+  line-height: 1;
+  cursor: pointer;
+  color: var(--black-color-);
+}
+
+/* Máy cảm ứng: bỏ hiệu ứng nhấc lên khi hover */
+@media (hover: none){
+  .home #home_btn .aboutme_btn:hover,
+  .home #home_btn .contact_btn:hover,
+  .whaticando a:hover,
+  .form a:hover,
+  .socialmedia a:hover{
+    transform: none;
+  }
+}
+
+
+/* ===== TABLET NGANG (≤1024px) ===== */
+@media (max-width: 1024px){
+  .navigation, .home, .whaticando, .questions, .contact{
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  .nav_left{ font-size: 26px; }
+  .nav_right{ gap: 24px; }
+
+  .home h1{ font-size: clamp(80px, 14vw, 160px); }
+  .home h4{ font-size: clamp(32px, 5vw, 56px); transform: translateY(-20px); }
+  .home p{ font-size: 30px; }
+  .homeright img{ width: 360px; }
+  .home .aboutme_btn,
+  .home #home_btn .contact_btn{ font-size: 28px; }
+  .home #home_btn{ gap: 24px; }
+
+  .aboutme h1{ font-size: 70px; letter-spacing: 20px; }
+  .aboutme .comments{ padding: 0 30px; }
+  .aboutme img{ width: 280px; }
+  .aboutme .comments .comment,
+  .aboutme .comments .comment:last-child{
+    width: 300px;
+    font-size: 20px;
+  }
+  .whaticando{
+    padding: 20px;
+  }
+  .whaticando h1{ font-size: 50px; }
+  .whaticando .infors{ grid-template-columns: repeat(1, 1fr); }
+  .whaticando .infors .infor{padding: 20px;}
+  .whaticando .infors .infor h3{ font-size: 30px; margin-bottom: -20px; }
+  .whaticando .infors .infor p{ font-size: 19px; }
+  .whaticando a{margin-top: 10px;}
+
+  .contact h1{ font-size: 70px; }
+  .contact_container { flex-direction: column;}
+  .form {padding:20px;}
+  .form h3, .contact_right h3{ font-size: 44px; }
+  .contact_right{padding-bottom: 10px;}
+  .form input{ font-size: 24px; }
+}
+
+
+/* ===== TABLET DỌC (≤768px) ===== */
+@media (max-width: 768px){
+  .navigation, .home, .whaticando, .questions, .contact{
+    min-height: auto;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  .aboutme{ min-height: auto; padding-bottom: 40px; }
+
+  /* Navigation + hamburger */
+  .navigation{ position: relative; }
+  .nav_left{ font-size: 20px; }
+  .nav_toggle{ display: block; }
+  .nav_right{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 20px;
+    padding: 24px;
+    background-color: var(--white-color-);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    z-index: 100;
+  }
+  .nav_right.open{ display: flex; }
+
+  /* Home */
+  .home{
+    min-height: auto;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    padding-top: 40px;
+    padding-bottom: 60px;
+    text-align: center;
+  }
+  .home h1{ font-size: clamp(64px, 22vw, 120px); }
+  .home h4{ font-size: 28px; transform: none; margin-bottom: 8px; }
+  .home p{ font-size: 20px; }
+  .homeright img{ width: 100%; max-width: 320px; }
+  .home #home_btn{
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .home .aboutme_btn,
+  .home #home_btn .contact_btn{ font-size: 20px; }
+
+  /* About me */
+  .aboutme h1{ font-size: 44px; letter-spacing: 6px; }
+  .aboutme .comments{
+    flex-direction: column;
+    gap: 24px;
+    padding: 30px 24px 0;
+  }
+  .aboutme .comments .comment,
+  .aboutme .comments .comment:last-child{
+    width: 100%;
+    font-size: 18px;
+    text-align: left;
+  }
+  .aboutme img{ width: 100%; max-width: 300px; }
+
+  /* What I can do */
+  .whaticando h1{ font-size: 40px; letter-spacing: 4px; }
+  .whaticando .infors{ grid-template-columns: 1fr; gap: 20px; }
+  .whaticando .infors .infor{ padding: 24px; }
+  .whaticando .infors .infor h3{ font-size: 26px; }
+  .whaticando .infors .infor p{ font-size: 17px; }
+  .tags{ flex-wrap: wrap; justify-content: center; }
+  .whaticando a{ font-size: 22px; margin-top: 30px; margin-bottom: 40px; }
+
+  /* Contact */
+  .contact{ padding-bottom: 40px; }
+  .contact h1{ font-size: 40px; letter-spacing: 4px; text-align: center; }
+  .contact_container{
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 30px;
+  }
+  .contact_left{ width: 100%; display: flex; justify-content: center; }
+  .form{ width: 100%; max-width: 600px; padding: 24px 16px; }
+  .form h3, .contact_right h3{ font-size: 32px; }
+  .form input{ font-size: 18px; margin: 24px 0; }
+  .form a{ font-size: 22px; }
+  .contact_right{ gap: 24px; width: 100%; }
+  .socialmedia{ flex-wrap: wrap; justify-content: center; gap: 24px; }
+  .socialmedia img{ width: 48px; }
+}
+
+
+/* ===== ĐIỆN THOẠI (≤480px) ===== */
+@media (max-width: 480px){
+  .navigation, .home, .whaticando, .questions, .contact{
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .nav_left{ font-size: 17px; }
+
+  .home h4{ font-size: 22px; }
+  .home p{ font-size: 17px; }
+  .home #home_btn{ flex-direction: column; align-items: center; }
+  .home .aboutme_btn,
+  .home #home_btn .contact_btn{ font-size: 18px; width: 100%; max-width: 260px; }
+
+  .aboutme h1{ font-size: 34px; letter-spacing: 3px; }
+  .aboutme .comments{ padding: 24px 16px 0; }
+  .aboutme .comments .comment,
+  .aboutme .comments .comment:last-child{ font-size: 16px; }
+
+  .whaticando h1{ font-size: 32px; letter-spacing: 2px; }
+  .whaticando .infors .infor{ padding: 20px; }
+  .whaticando .infors .infor h3{ font-size: 22px; }
+  .whaticando .infors .infor p{ font-size: 16px; }
+  .whaticando .infors .infor .tags .tag{ font-size: 14px; padding: 4px 12px; }
+
+  .contact h1{ font-size: 32px; letter-spacing: 2px; }
+  .form h3, .contact_right h3{ font-size: 26px; }
+  .form input{ font-size: 16px; }
+}
