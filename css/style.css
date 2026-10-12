@@ -426,6 +426,23 @@ body{
   color: var(--black-color-);
 }
 
+/* QRCODE */
+.qrcode{
+  min-height: calc(100dvh - 63px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.qrcode img{
+  width: 500px;
+}
+.qrcode p{
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 40px;
+  text-align: center;
+}
+
 /* Máy cảm ứng: bỏ hiệu ứng nhấc lên khi hover */
 @media (hover: none){
   .home #home_btn .aboutme_btn:hover,
@@ -605,4 +622,7 @@ body{
   .contact h1{ font-size: 32px; letter-spacing: 2px; }
   .form h3, .contact_right h3{ font-size: 26px; }
   .form input{ font-size: 16px; }
+
+  .qrcode img{width: 300px;}
+  .qrcode p{font-size: 30px;}
 }
