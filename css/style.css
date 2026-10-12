@@ -413,19 +413,6 @@ body{
   transition: 0.3s ease;
 }
 
-/* ===== RESPONSIVE: dán toàn bộ đoạn này vào CUỐI file style.css ===== */
-
-/* Nút hamburger: ẩn trên desktop */
-.nav_toggle{
-  display: none;
-  background: none;
-  border: 0;
-  font-size: 30px;
-  line-height: 1;
-  cursor: pointer;
-  color: var(--black-color-);
-}
-
 /* QRCODE */
 .qrcode{
   min-height: calc(100dvh - 63px);
@@ -442,6 +429,21 @@ body{
   font-size: 40px;
   text-align: center;
 }
+
+
+/* ===== RESPONSIVE: dán toàn bộ đoạn này vào CUỐI file style.css ===== */
+
+/* Nút hamburger: ẩn trên desktop */
+.nav_toggle{
+  display: none;
+  background: none;
+  border: 0;
+  font-size: 30px;
+  line-height: 1;
+  cursor: pointer;
+  color: var(--black-color-);
+}
+
 
 /* Máy cảm ứng: bỏ hiệu ứng nhấc lên khi hover */
 @media (hover: none){
