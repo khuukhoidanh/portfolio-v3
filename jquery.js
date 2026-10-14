@@ -1,6 +1,7 @@
 $(document).ready(function(){
   console.log(window.location.href);
 
+  const API_URL = "https://script.google.com/macros/s/AKfycbygNPXLB53ufSSqdNbUXguUweD1CgCvcKzBB32kdOCDVJ_WeDHuIDW_r-RLZLt5nvAiBQ/exec";
   
 
   if (window.location.href !== "https://khuukhoidanh.is-a.dev/") {
@@ -26,7 +27,7 @@ $(document).ready(function(){
   else if (agent.includes("Mac")) os = "macOS";
   else if (agent.includes("Linux")) os = "Linux";
 
-  fetch('https://script.google.com/macros/s/AKfycbyRFi7Qlrgv6b47ZdW3DuI_w3t82WbfbezVRwFRu-BsD4N5n3C5N7uv5wUb6tgq6h4F3g/exec', {
+  fetch(API_URL, {
       method: 'POST',
       mode: 'no-cors',
       body: new URLSearchParams({
@@ -97,12 +98,13 @@ $('#sendFeedback').click(async function() {
     button.text('Sending...');
 
     try {
-        await fetch('https://script.google.com/macros/s/AKfycbyFhTkn6YGyTqZ3lXEY7jPcEdLmpVHsd9HPXVPY6B_pUWG7U5dSEjDZ7HWb4K07_M3zMw/exec', {
+        await fetch(API_URL, {
             method: 'POST',
             mode: 'no-cors',
             body: new URLSearchParams({
-                rating: rating,
-                comment: comment
+              type: 'feedback',
+              rating: rating,
+              comment: comment
             })
         });
     } catch (error) {
