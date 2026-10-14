@@ -111,6 +111,7 @@ $('#sendFeedback').click(async function() {
         });
     } catch (error) {
         $('#feedbackStatus').text('Unable to send feedback.');
+        console.error("Feedback Error:", error);
     } finally {
         button.prop('disabled', true);
         button.html('Feedback Sended Successful');
