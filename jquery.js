@@ -1,6 +1,44 @@
 $(document).ready(function(){
-  console.log("Welcome to my portfolio ~~~");
-  console.log("This website just for education purpose only so is there any bugs or problems while using this website pls forget it ~ Thanks for joining my website ~");
+  console.log(window.location.href);
+
+  
+
+  if (window.location.href !== "https://khuukhoidanh.is-a.dev/") {
+    return;
+  }
+
+
+  let agent = navigator.userAgent;
+
+  let device = /Mobi|Android|iPhone/i.test(agent)
+      ? "Mobile" : "Desktop";
+
+  let browser = "Other";
+  if (agent.includes("Edg/")) browser = "Edge";
+  else if (agent.includes("Chrome/")) browser = "Chrome";
+  else if (agent.includes("Firefox/")) browser = "Firefox";
+  else if (agent.includes("Safari/")) browser = "Safari";
+
+  let os = "Other";
+  if (agent.includes("Windows")) os = "Windows";
+  else if (agent.includes("Android")) os = "Android";
+  else if (/iPhone|iPad/i.test(agent)) os = "iOS / iPadOS";
+  else if (agent.includes("Mac")) os = "macOS";
+  else if (agent.includes("Linux")) os = "Linux";
+
+  fetch('https://script.google.com/macros/s/AKfycbyRFi7Qlrgv6b47ZdW3DuI_w3t82WbfbezVRwFRu-BsD4N5n3C5N7uv5wUb6tgq6h4F3g/exec', {
+      method: 'POST',
+      mode: 'no-cors',
+      body: new URLSearchParams({
+          type: 'visitor',
+          device: device,
+          browser: browser,
+          os: os,
+          page: window.location.pathname
+      })
+  }).catch(function(error) {
+      console.error('Visitor log error:', error);
+  });
 });
 
 $('.nav_toggle').on('click', function () {
