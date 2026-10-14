@@ -1,7 +1,9 @@
+const API_URL = "https://script.google.com/macros/s/AKfycbygNPXLB53ufSSqdNbUXguUweD1CgCvcKzBB32kdOCDVJ_WeDHuIDW_r-RLZLt5nvAiBQ/exec";
+
 $(document).ready(function(){
   console.log(window.location.href);
 
-  const API_URL = "https://script.google.com/macros/s/AKfycbygNPXLB53ufSSqdNbUXguUweD1CgCvcKzBB32kdOCDVJ_WeDHuIDW_r-RLZLt5nvAiBQ/exec";
+  
   
 
   if (window.location.href !== "https://khuukhoidanh.is-a.dev/") {
