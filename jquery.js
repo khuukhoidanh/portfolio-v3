@@ -15,3 +15,13 @@ $('#send_btn').click(function (e) {
   
   $(this).text("Sended !");
 });
+
+$('nav a[href^="#"]').click(function(e) {
+    e.preventDefault();
+
+    let id = $(this).attr('href');
+
+    $('html, body').animate({
+        scrollTop: $(id).offset().top
+    }, 0);
+});
