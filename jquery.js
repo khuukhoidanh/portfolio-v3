@@ -1,4 +1,4 @@
-const API_URL = "https://script.google.com/macros/s/AKfycbygNPXLB53ufSSqdNbUXguUweD1CgCvcKzBB32kdOCDVJ_WeDHuIDW_r-RLZLt5nvAiBQ/exec";
+const API_URL = "https://script.google.com/macros/s/AKfycbzBpHV5i9caslYYntdKmraTeADSW1QAp1c46-X2y9KvTAWMq7Dzfc-02GsQHt0cPiczDw/exec";
 
 $(document).ready(function(){
   console.log(window.location.href);
