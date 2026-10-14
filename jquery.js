@@ -89,35 +89,22 @@ $('.stars button').click(function() {
 });
 
 // Send feedback
-$('#sendFeedback').click(async function() {
+$('#sendFeedback').click(function() {
 
     if (rating === 0) {
-        $('#feedbackStatus').text('Please rate and write a comment.');
+        $('#feedbackStatus').text('Please select a rating.');
         return;
     }
 
-    let button = $(this);
-    let comment = $('#comment').val().trim() || '`Không có comment`';
+    let comment = $('#comment').val().trim() || 'Không có comment';
 
-    button.prop('disabled', true);
-    button.text('Sending...');
+    $('#postRating').val(rating);
+    $('#postComment').val(comment);
 
-    try {
-        await fetch(API_URL, {
-            method: 'POST',
-            mode: 'no-cors',
-            body: new URLSearchParams({
-              type: 'feedback',
-              rating: rating,
-              comment: comment
-            })
-        });
-    } catch (error) {
-        $('#feedbackStatus').text('Unable to send feedback.');
-        console.error("Feedback Error:", error);
-    } finally {
-        button.prop('disabled', true);
-        button.html('Feedback Sended Successful');
-        // $('#feedbackStatus').text('Feedback Sended Successful ~');
-    }
+    $('#feedbackPostForm').attr('action', API_URL);
+
+    // Send form to Google Apps Script
+    $('#feedbackPostForm')[0].submit();
+
+    $('#feedbackStatus').text('Feedback submitted. Please check Discord.');
 });

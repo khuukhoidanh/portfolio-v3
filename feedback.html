@@ -60,5 +60,20 @@
   <!-- LOAD JQUERY -->
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="jquery.js"></script>
+
+  <!-- Hidden feedback sender -->
+<iframe name="feedbackFrame"
+        style="display:none;"></iframe>
+
+<form id="feedbackPostForm"
+      method="POST"
+      target="feedbackFrame"
+      style="display:none;">
+
+    <input type="hidden" name="type" value="feedback">
+    <input type="hidden" name="rating" id="postRating">
+    <input type="hidden" name="comment" id="postComment">
+
+  </form>
 </body>
 </html>
