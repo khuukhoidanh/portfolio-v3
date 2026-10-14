@@ -338,6 +338,11 @@ body{
   text-align: center;
 }
 
+.form p{
+  text-align: center;
+  font-style: italic;
+}
+
 .form input{
   padding: 10px 0;
   font-family: "Bricolage Grotesque", sans-serif;
