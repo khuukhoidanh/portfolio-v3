@@ -48,6 +48,11 @@ body{
   min-height: 63px;
 }
 
+#nav_comment{
+  font-size: 20px;
+  font-style:oblique;
+}
+
 .nav_left{
   font-size: 30px;
   font-weight: 700;
@@ -623,6 +628,13 @@ body{
 }
 
 
+/* ===== TABLET NGANG (≤1440px) ===== */
+@media (max-width: 1440px){
+  #nav_comment{
+  font-size: 17px;
+  font-style:oblique;
+}
+}
 /* ===== TABLET NGANG (≤1024px) ===== */
 @media (max-width: 1024px){
   .navigation, .home, .whaticando, .questions, .contact{
@@ -632,6 +644,7 @@ body{
 
   .nav_left{ font-size: 26px; }
   .nav_right{ gap: 24px; }
+  #nav_comment{font-size: 15px;}
 
   .home h1{ font-size: clamp(80px, 14vw, 160px); }
   .home h4{ font-size: clamp(32px, 5vw, 56px); transform: translateY(-20px); }
