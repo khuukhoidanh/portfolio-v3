@@ -6,8 +6,11 @@ $(document).ready(function(){
   
   
 
-  if (window.location.href !== "https://khuukhoidanh.is-a.dev/") {
-    return;
+  if (
+    window.location.hostname !== "khuukhoidanh.is-a.dev" ||
+    window.location.pathname !== "/"
+  ) {
+      return;
   }
 
 
