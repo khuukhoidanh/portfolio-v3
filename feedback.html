@@ -1,0 +1,64 @@
+<!-- ENGLISH VERSION PAGE -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="img/icon.svg">
+  <link rel="stylesheet" href="css/style.css">
+  <title>KhuuKhoiDanh | Portfolio</title>
+</head>
+<body>
+  <!-- NAVIGATION -->
+  <nav class="navigation">
+    <a href="#top" class="nav_left">KhuuKhoiDanh's Portfolio
+    </a>
+    <button class="nav_toggle" aria-label="Menu">☰</button>
+    <div class="nav_right">
+      <a href="index.html" class="nav_button">HOME</a>
+    </div>
+  </nav>
+
+  <!-- FEEDBACK -->
+  <section class="feedback" id="feedback">
+    <div class="form_feedback">
+        <div class="feedback_header">
+            <span>YOUR OPINION MATTERS</span>
+            <span>✳</span>
+        </div>
+        <h1>Leave a feedback<span>.</span></h1>
+        <p class="feedback_desc">
+            Your thoughts help me create better experiences.
+        </p>
+        <div class="feedback_rating">
+            <div class="feedback_label">
+                <label>How was your experience?</label>
+                <span id="ratingText">Select rating</span>
+            </div>
+            <div class="stars">
+                <button type="button" data-star="1">☆</button>
+                <button type="button" data-star="2">☆</button>
+                <button type="button" data-star="3">☆</button>
+                <button type="button" data-star="4">☆</button>
+                <button type="button" data-star="5">☆</button>
+            </div>
+        </div>
+        <div class="feedback_comment">
+            <label for="comment">Your message</label>
+            <textarea id="comment"
+                maxlength="1000"
+                placeholder="Share your thoughts with me..."></textarea>
+        </div>
+        <button type="button" id="sendFeedback">
+            Send feedback
+        </button>
+        <p id="feedbackStatus" role="status"></p>
+      </div>
+  </section>
+
+  <!-- LOAD JQUERY -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="jquery.js"></script>
+</body>
+</html>

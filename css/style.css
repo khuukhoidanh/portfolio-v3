@@ -435,6 +435,167 @@ body{
   text-align: center;
 }
 
+/* ===== FEEDBACK SECTION ===== */
+
+.feedback {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 20px;
+    background: #f7f7f7;
+}
+
+.form_feedback {
+    width: 100%;
+    max-width: 480px;
+    padding: 40px;
+    background: #fff;
+    border: 1px solid #e8e8e8;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
+/* Header */
+.feedback_header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #888;
+}
+
+.form_feedback h1 {
+    margin: 25px 0 10px;
+    font-size: 34px;
+    font-weight: 600;
+    letter-spacing: -1.5px;
+    color: #111;
+}
+
+.form_feedback h1 span {
+    color: #999;
+}
+
+.feedback_desc {
+    font-size: 14px;
+    color: #888;
+    line-height: 1.6;
+}
+
+/* Rating */
+.feedback_rating {
+    margin-top: 30px;
+    padding-top: 25px;
+    border-top: 1px solid #eee;
+}
+
+.feedback_label {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    font-size: 13px;
+}
+
+.feedback_label span {
+    color: #999;
+}
+
+.stars {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.stars button {
+    flex: 1;
+    height: 55px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    background: #fafafa;
+    font-size: 30px;
+    color: #aaa;
+    cursor: pointer;
+    text-align: center;
+    transition: 0.2s;
+}
+
+.stars button:hover {
+    background: #f0f0f0;
+    transform: translateY(-3px);
+}
+
+.stars button.active {
+    color: #e8ad35;
+    background: #fff9ea;
+    border-color: #f3dfad;
+}
+
+/* Comment */
+.feedback_comment {
+    margin-top: 30px;
+}
+
+.feedback_comment label {
+    display: block;
+    margin-bottom: 12px;
+    font-size: 13px;
+}
+
+.feedback_comment textarea {
+    width: 100%;
+    height: 125px;
+    padding: 15px;
+    box-sizing: border-box;
+    border: 1px solid #e8e8e8;
+    border-radius: 10px;
+    background: #fafafa;
+    font: inherit;
+    font-size: 13px;
+    resize: vertical;
+    outline: none;
+    transition: 0.2s;
+}
+
+.feedback_comment textarea:focus {
+    border-color: #111;
+    background: #fff;
+}
+
+/* Send */
+#sendFeedback {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+    padding: 17px 20px;
+    border: none;
+    border-radius: 10px;
+    background: #111;
+    color: #fff;
+    font-size: 13px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#sendFeedback:hover {
+    background: #333;
+    transform: translateY(-2px);
+}
+
+#sendFeedback:disabled {
+    opacity: 0.5;
+    transform: none;
+}
+
+#feedbackStatus {
+    margin-top: 12px;
+    font-size: 12px;
+    text-align: center;
+    color: #777;
+}
+
+
 
 /* ===== RESPONSIVE: dán toàn bộ đoạn này vào CUỐI file style.css ===== */
 
@@ -632,4 +793,9 @@ body{
 
   .qrcode img{width: 300px;}
   .qrcode p{font-size: 30px;}
+  .feedback {padding: 40px 15px;}
+  .form_feedback {padding: 25px 20px;}
+  .form_feedback h1 {font-size: 28px;}
+  .stars {gap: 6px;}
+  .stars button {height: 48px;font-size: 25px;}
 }
