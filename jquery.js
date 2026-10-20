@@ -106,5 +106,9 @@ $('#sendFeedback').click(function() {
     // Send form to Google Apps Script
     $('#feedbackPostForm')[0].submit();
 
-    $('#feedbackStatus').text('Feedback submitted. Please check Discord.');
+    // Block the button
+    $(this).prop('disabled',true);
+    $(this).text('Feedback Sended !');
+
+    // $('#feedbackStatus').text('Feedback submitted. Please check Discord.');
 });
